@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selena Marte | Crypto Education</title>
+    <meta name="description" content="Professional crypto trading courses and mentorship">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Selena<span>Marte</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="education.html" class="nav-link active">Education</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="education-hero">
+            <div class="container">
+                <h1>Master Crypto Trading</h1>
+                <p>Premium courses and personalized mentorship to accelerate your trading journey</p>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="container">
+                <h2 class="section-title">Available <span>Courses</span></h2>
+                <p class="section-subtitle">Select a course to begin your crypto mastery</p>
+                
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-course="foundations">
+                        <div class="course-badge">Beginner</div>
+                        <div class="course-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Crypto Foundations</h3>
+                        <p class="course-desc">Learn blockchain basics, wallets, and safe trading practices</p>
+                        <div class="course-price">0.05 ETH</div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="course-card" data-course="technical">
+                        <div class="course-badge">Intermediate</div>
+                        <div class="course-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Technical Analysis Pro</h3>
+                        <p class="course-desc">Master chart patterns, indicators, and trading strategies</p>
+                        <div class="course-price">0.1 ETH</div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </div>
+                    
+                    <!-- Course 3 -->
+                    <div class="course-card" data-course="algo">
+                        <div class="course-badge">Advanced</div>
+                        <div class="course-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Algorithmic Trading</h3>
+                        <p class="course-desc">Build and deploy your own trading bots</p>
+                        <div class="course-price">0.15 ETH</div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </div>
+                    
+                    <!-- Course 4 -->
+                    <div class="course-card" data-course="mentorship">
+                        <div class="course-badge">Premium</div>
+                        <div class="course-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>1-on-1 Mentorship</h3>
+                        <p class="course-desc">Personalized coaching sessions with Selena</p>
+                        <div class="course-price">0.5 ETH</div>
+                        <button class="btn btn-primary">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+    <div class="modal-container">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header">
+            <h3 id="modalCourseTitle">Course Title</h3>
+            <p id="modalCoursePrice">0.1 ETH</p>
+        </div>
+        
+        <div class="modal-body">
+            <div class="payment-instructions">
+                <h4>Payment Instructions</h4>
+                <ol>
+                    <li>Send exact amount to the address below</li>
+                    <li>Include your email in the transaction memo</li>
+                    <li>You'll receive access within 24 hours</li>
+                </ol>
+                
+                <div class="crypto-methods">
+                    <div class="crypto-method active" data-method="eth">
+                        <i class="fab fa-ethereum"></i>
+                        <span>Ethereum</span>
+                    </div>
+                    <div class="crypto-method" data-method="btc">
+                        <i class="fab fa-bitcoin"></i>
+                        <span>Bitcoin</span>
+                    </div>
+                    <div class="crypto-method" data-method="usdt">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>USDT</span>
+                    </div>
+                    <div class="crypto-method" data-method="sol">
+                        <i class="fas fa-bolt"></i>
+                        <span>Solana</span>
+                    </div>
+                </div>
+                
+                <div class="address-display">
+                    <code id="cryptoAddress">0x7f...3a4b</code>
+                    <button class="copy-btn" data-address="">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                
+                <div class="qr-code">
+                    <img id="qrCodeImage" src="" alt="Payment QR Code">
+                </div>
+            </div>
+            
+            <div class="verification-form">
+                <h4>Payment Verification</h4>
+                <form id="verifyForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Transaction Hash" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">Selena<span>Marte</span></a>
+                <p>Professional crypto trading services with a focus on risk management and consistent returns.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><h3>Quick Links</h3></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul>
+                    <li><h3>Services</h3></li>
+                    <li><a href="#services">Manual Trading</a></li>
+                    <li><a href="#services">Algorithmic Trading</a></li>
+                    <li><a href="#services">Risk Management</a></li>
+                    <li><a href="#services">Education</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Selena Marte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/education.js"></script>
+</body>
+</html>
