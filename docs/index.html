@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selena Marte - Project Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Selena Marte</h1>
+        <h2>Crypto Trading Platform</h2>
+        <nav>
+            <ul>
+                <li><a href="#overview"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="#structure"><i class="fas fa-folder"></i> Project Structure</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Key Features</a></li>
+                <li><a href="#installation"><i class="fas fa-download"></i> Installation</a></li>
+                <li><a href="#configuration"><i class="fas fa-cog"></i> Configuration</a></li>
+                <li><a href="#customization"><i class="fas fa-paint-brush"></i> Customization</a></li>
+                <li><a href="#deployment"><i class="fas fa-rocket"></i> Deployment</a></li>
+                <li><a href="#support"><i class="fas fa-question-circle"></i> Support</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <section id="overview" class="doc-section">
+            <h2><i class="fas fa-home"></i> Overview</h2>
+            <p>A professional cryptocurrency trading portfolio website featuring:</p>
+            <ul>
+                <li>Responsive one-page design</li>
+                <li>Interactive trading charts</li>
+                <li>Course marketplace with crypto payments</li>
+                <li>Dark/light mode toggle</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>[Website Screenshot]</p>
+            </div>
+        </section>
+
+        <section id="structure" class="doc-section">
+            <h2><i class="fas fa-folder"></i> Project Structure</h2>
+            <pre>
+selenloveslex.com/
+├── index.html              # Main website
+├── education.html          # Courses page
+├── assets/
+│   ├── css/
+│   │   └── main.css        # All styles
+│   ├── js/
+│   │   ├── main.js         # Main functionality
+│   │   └── education.js    # Courses functionality
+│   └── img/                # Images
+└── docs/                   # This documentation
+            </pre>
+        </section>
+
+        <section id="features" class="doc-section">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            
+            <h3>Core Functionality</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Trading Charts</h4>
+                    <p>Integrated TradingView widgets for BTC/ETH with real-time data</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>Course Marketplace</h4>
+                    <p>Multi-cryptocurrency payment system (ETH, BTC, USDT, SOL)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-moon"></i>
+                    <h4>Dark Mode</h4>
+                    <p>Theme toggle with localStorage persistence</p>
+                </div>
+            </div>
+            
+            <h3>Technical Highlights</h3>
+            <ul>
+                <li>Intersection Observer API for scroll animations</li>
+                <li>Dynamic QR code generation for payments</li>
+                <li>Responsive design with CSS Grid/Flexbox</li>
+                <li>Form validation and submission handling</li>
+            </ul>
+        </section>
+
+        <section id="installation" class="doc-section">
+            <h2><i class="fas fa-download"></i> Installation</h2>
+            <ol>
+                <li>Clone the repository:
+                    <pre>git clone https://github.com/Gibsonodoka/selenloveslex.git</pre>
+                </li>
+                <li>Navigate to project directory:
+                    <pre>cd maindir</pre>
+                </li>
+                <li>Open in browser:
+                    <pre>Open index.html in your preferred browser</pre>
+                </li>
+            </ol>
+            
+            <div class="note">
+                <strong>Note:</strong> No build process required - works as static site
+            </div>
+        </section>
+
+        <section id="configuration" class="doc-section">
+            <h2><i class="fas fa-cog"></i> Configuration</h2>
+            
+            <h3>Payment Addresses</h3>
+            <p>Edit <code>education.js</code> with your cryptocurrency addresses:</p>
+            <pre>
+addresses: {
+    eth: "YOUR_ETH_ADDRESS",
+    btc: "YOUR_BTC_ADDRESS", 
+    usdt: "YOUR_USDT_ADDRESS",
+    sol: "YOUR_SOL_ADDRESS"
+}</pre>
+            
+            <h3>API Keys (Optional)</h3>
+            <p>For enhanced functionality:</p>
+            <ul>
+                <li>CoinGecko API for market data</li>
+                <li>Etherscan API for gas prices</li>
+            </ul>
+        </section>
+
+        <section id="customization" class="doc-section">
+            <h2><i class="fas fa-paint-brush"></i> Customization</h2>
+            
+            <h3>Changing Colors</h3>
+            <p>Edit CSS variables in <code>main.css</code>:</p>
+            <pre>
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #00cec9;
+    --bg-color: #ffffff;
+    /* ... */
+}</pre>
+            
+            <h3>Adding Courses</h3>
+            <p>Modify the courses object in <code>education.js</code>:</p>
+            <pre>
+const courses = {
+    newCourse: {
+        title: "New Course Title",
+        prices: {
+            eth: "0.1 ETH",
+            // other currencies...
+        },
+        addresses: {
+            // addresses...
+        }
+    }
+    // ...existing courses
+}</pre>
+        </section>
+
+        <section id="deployment" class="doc-section">
+            <h2><i class="fas fa-rocket"></i> Deployment</h2>
+            
+            <h3>Static Hosting</h3>
+            <p>Deploy to any static hosting service:</p>
+            <div class="deploy-options">
+                <div class="option">
+                    <h4>Netlify</h4>
+                    <ol>
+                        <li>Drag-and-drop the folder</li>
+                        <li>Enable automatic deploys from GitHub</li>
+                    </ol>
+                </div>
+                <div class="option">
+                    <h4>Vercel</h4>
+                    <ol>
+                        <li>Import GitHub repository</li>
+                        <li>Select framework as "Static"</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="doc-section">
+            <h2><i class="fas fa-question-circle"></i> Support</h2>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <h3><i class="fas fa-bug"></i> Reporting Issues</h3>
+                    <p>Open an issue on GitHub with:</p>
+                    <ul>
+                        <li>Steps to reproduce</li>
+                        <li>Expected vs actual behavior</li>
+                        <li>Screenshots if applicable</li>
+                    </ul>
+                </div>
+                
+                <div class="support-card">
+                    <h3><i class="fas fa-envelope"></i> Contact</h3>
+                    <p>For direct support:</p>
+                    <p>Email: <a href="mailto:support@selenloveslex.com">support@selenloveslex.com</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Selena Marte. All rights reserved.</p>
+    </footer>
+</body>
+</html>
